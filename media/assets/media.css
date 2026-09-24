@@ -306,7 +306,10 @@ a.items__tile:hover { border-color: var(--brand-ink); transform: translateY(-2px
 .art-hd__meta dt { color: var(--ink-3); }
 .art-hd__meta dd { margin: 0; font-weight: 500; }
 .art-hd__meta time { font-family: var(--f-mono); }
-.art-cover { margin: 0 0 48px; border-radius: var(--r); overflow: hidden; max-width: min(100%, 820px); }
+.art-cover { margin: 0 0 48px; max-width: min(100%, 820px); }
+.art-cover img { border-radius: var(--r); aspect-ratio: 16 / 9; width: 100%; object-fit: cover; background: var(--tint); }
+.art-cover figcaption { margin-top: 8px; font-size: 11.5px; color: var(--ink-3); text-align: right; }
+.art-cover figcaption a { color: inherit; }
 .art-grid { display: grid; grid-template-columns: 240px minmax(0, 720px); gap: 56px; justify-content: start; }
 .art-grid:not(:has(.toc)) { grid-template-columns: minmax(0, 720px); }
 .toc details { position: sticky; top: 96px; font-size: 13.5px; border-left: 2px solid var(--line); padding-left: 16px; }

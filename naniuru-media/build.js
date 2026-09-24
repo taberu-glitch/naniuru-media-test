@@ -152,7 +152,7 @@ for (const a of loadDir(path.join(CONTENT, 'articles'))) {
     tags: (fm.tags || []).map(tagFor),
     series, seriesOrder: Number(fm.seriesOrder) || 0,
     featured: fm.featured === true, author: fm.author || site.defaultAuthor,
-    cover: fm.cover || '', coverLabel: fm.coverLabel || (cat ? cat.en : ''),
+    cover: fm.cover || '', coverCredit: fm.coverCredit || '', coverLabel: fm.coverLabel || (cat ? cat.en : ''),
     ogImage: fm.ogImage || site.ogImage || '',
     draft, scheduled, html, toc,
     readMin: Math.max(1, Math.round(strip(html).length / 500))
@@ -175,7 +175,7 @@ const bySeries = (s) => all.filter((a) => a.series === s).sort((a, b) => (a.seri
 const liveCats = site.categories.filter((c) => byCat(c).length);
 const liveSeries = site.series.filter((s) => bySeries(s).length);
 const liveTags = [...tagByName.values()].map((t) => ({ t, n: byTag(t).length })).filter((x) => x.n).sort((a, b) => b.n - a.n);
-const coverUrl = (a) => a.cover ? (a.cover.startsWith('/') ? a.cover : `${BASE}images/${a.cover}`) : `${BASE}assets/covers/${a.slug}.svg`;
+const coverUrl = (a) => a.cover ? (/^(https?:)?\/\//.test(a.cover) || a.cover.startsWith('/') ? a.cover : `${BASE}images/${a.cover.replace(/^images\//, '')}`) : `${BASE}assets/covers/${a.slug}.svg`;
 
 // ---------- icons ----------
 const ICON = {
@@ -468,7 +468,7 @@ function pageArticle(a) {
       </dl>
       ${tagList(a.tags, L, 99)}
     </header>
-    <figure class="art-cover"><img src="${L(coverUrl(a))}" alt="" width="1200" height="675"></figure>
+    <figure class="art-cover"><img src="${L(coverUrl(a))}" alt="" width="1200" height="675">${a.coverCredit ? `<figcaption>${a.coverCredit.startsWith('http') ? `<a href="${esc(a.coverCredit)}" target="_blank" rel="noopener">写真：Unsplash</a>` : esc(a.coverCredit)}</figcaption>` : ''}</figure>
     <div class="art-grid">
       ${toc}
       <div class="prose">
@@ -490,7 +490,7 @@ ${related.length ? `<section class="sec sec--tint" aria-labelledby="rel-title"><
     datePublished: a.date, dateModified: a.updated, inLanguage: 'ja',
     author: { '@type': 'Organization', name: a.author }, publisher: { '@type': 'Organization', name: site.publisher },
     ...(site.siteUrl ? { mainEntityOfPage: abs(url) } : {}),
-    ...(a.ogImage && site.siteUrl ? { image: a.ogImage.startsWith('http') ? a.ogImage : abs(a.ogImage) } : {})
+    ...(a.ogImage && (a.ogImage.startsWith('http') || site.siteUrl) ? { image: a.ogImage.startsWith('http') ? a.ogImage : abs(a.ogImage) } : {})
   }, crumbsLd(cr)];
   write(url, layout({ url, main, fullTitle: a.seoTitle, ogTitle: a.title, description: a.description, ogType: 'article', ld, active: a.cat.slug, ogImage: a.ogImage, bodyClass: 'page-article' }));
 }

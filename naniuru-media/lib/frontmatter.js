@@ -84,7 +84,7 @@
 
   var ORDER = ['title', 'shortTitle', 'seoTitle', 'description', 'url', 'date', 'updated',
     'category', 'items', 'tags', 'series', 'seriesOrder', 'featured', 'author',
-    'cover', 'coverLabel', 'ogImage', 'draft'];
+    'cover', 'coverCredit', 'coverLabel', 'ogImage', 'draft'];
 
   function stringify(data, body) {
     var keys = Object.keys(data).filter(function (k) { return data[k] !== undefined && data[k] !== null; });
