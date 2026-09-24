@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>記事の編集｜ナニウルメディア</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@600;700&display=swap">
+<link rel="stylesheet" href="../assets/media.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="ad-hd">
+  <a class="brand" href="../"><span class="brand__mark" aria-hidden="true">NU</span><span class="brand__txt"><span class="brand__name">ナニウルメディア</span><span class="brand__sub">記事の編集</span></span></a>
+  <div class="ad-hd__act">
+    <span class="ad-conn" id="conn">未接続</span>
+    <button class="btn btn--ghost" type="button" id="btn-settings">接続設定</button>
+  </div>
+</header>
+
+<div class="ad">
+  <aside class="ad-side">
+    <button class="btn btn--cta btn--block" type="button" id="btn-new">＋ 新しい記事</button>
+    <div class="ad-side__hd"><h2 class="mini-title">記事</h2><button class="linkish" type="button" id="btn-reload">再読み込み</button></div>
+    <ul class="ad-list" id="list"><li class="ad-empty">接続設定をすると、リポジトリの記事が表示されます。</li></ul>
+    <label class="ad-open-file">ファイルから開く<input type="file" id="open-file" accept=".html,.htm"></label>
+  </aside>
+
+  <main class="ad-main">
+    <form id="form" class="ad-form" novalidate>
+      <div class="ad-bar">
+        <div class="ad-bar__file"><span class="mini-title">ファイル</span><code id="filename">新しい記事</code></div>
+        <div class="ad-bar__act">
+          <button class="btn btn--ghost" type="button" id="btn-download">ファイルに書き出す</button>
+          <button class="btn btn--cta" type="submit" id="btn-save">保存して公開</button>
+        </div>
+      </div>
+      <p class="ad-msg" id="msg" role="status" aria-live="polite"></p>
+      <ul class="ad-issues" id="issues"></ul>
+
+      <fieldset class="ad-fs">
+        <legend>基本情報</legend>
+        <div class="f f--full"><label for="f-title">タイトル <b>必須</b></label><input id="f-title" required placeholder="例：金の買取相場の見方｜買取価格の決まり方と、自分で目安を出す計算方法"><small>「｜」の前が見出し、後ろが副題として表示されます。</small></div>
+        <div class="f"><label for="f-shortTitle">短いタイトル</label><input id="f-shortTitle" placeholder="パンくず・連載一覧で使う短い名前"></div>
+        <div class="f"><label for="f-slug">ファイル名 <b>必須</b></label><input id="f-slug" required pattern="[a-z0-9-]+" placeholder="gold-souba"><small>半角英数字とハイフン。</small></div>
+        <div class="f f--full"><label for="f-description">説明文（meta description） <b>必須</b></label><textarea id="f-description" rows="3" required></textarea><small><span id="desc-count">0</span>文字（目安：80〜120文字）</small></div>
+        <div class="f f--full"><label for="f-url">公開URL <b>必須</b></label><input id="f-url" required placeholder="/media/guide/kaitori-erabikata/"></div>
+        <div class="f"><label for="f-date">公開日 <b>必須</b></label><input id="f-date" type="date" required><small>未来の日付にすると、その日に自動で公開されます。</small></div>
+        <div class="f"><label for="f-updated">更新日</label><input id="f-updated" type="date"><small>内容を直したら今日の日付に。</small></div>
+        <div class="f f--check"><label><input id="f-draft" type="checkbox"> 下書き（公開しない）</label><label><input id="f-featured" type="checkbox"> 編集部のおすすめに表示</label></div>
+      </fieldset>
+
+      <fieldset class="ad-fs">
+        <legend>分類</legend>
+        <div class="f"><label for="f-category">カテゴリー <b>必須</b></label><select id="f-category" required></select></div>
+        <div class="f"><label for="f-series">連載</label><select id="f-series"><option value="">（なし）</option></select></div>
+        <div class="f"><label for="f-seriesOrder">連載の順番</label><input id="f-seriesOrder" type="number" min="0" step="1"></div>
+        <div class="f f--full"><span class="lbl">品目</span><div class="checks" id="f-items"></div></div>
+        <div class="f f--full"><label for="f-tags">タグ（カンマ区切り）</label><input id="f-tags" list="tag-list" placeholder="金, 相場, 本人確認"><datalist id="tag-list"></datalist><small id="tag-hint">登録済み：</small></div>
+        <div class="f"><label for="f-coverLabel">カバーの刻印文字</label><input id="f-coverLabel" placeholder="K24 · K18 · K10"><small>記事のカバー画像に入る短い英数字。</small></div>
+        <div class="f"><label for="f-cover">カバー画像（任意）</label><input id="f-cover" placeholder="images/xxx.jpg をアップロード後に選択"><small>空欄なら刻印デザインを自動生成。</small></div>
+        <div class="f f--full"><label for="f-seoTitle">SEOタイトル（任意）</label><input id="f-seoTitle" placeholder="空欄なら「タイトル｜ナニウル」"></div>
+      </fieldset>
+
+      <fieldset class="ad-fs ad-fs--body">
+        <legend>本文</legend>
+        <div class="ad-tools" role="toolbar" aria-label="本文の挿入">
+          <button type="button" data-ins="h2">見出し</button>
+          <button type="button" data-ins="h3">小見出し</button>
+          <button type="button" data-ins="p">段落</button>
+          <button type="button" data-ins="strong">太字</button>
+          <button type="button" data-ins="a">リンク</button>
+          <button type="button" data-ins="ul">箇条書き</button>
+          <button type="button" data-ins="ol">番号リスト</button>
+          <button type="button" data-ins="checklist">チェックリスト</button>
+          <button type="button" data-ins="table">表</button>
+          <button type="button" data-ins="formula">計算式</button>
+          <button type="button" data-ins="faq">Q&amp;A</button>
+          <button type="button" data-ins="cta">査定ボタン</button>
+          <label class="ad-tools__img">画像<input type="file" id="img-file" accept="image/*"></label>
+        </div>
+        <div class="ad-split">
+          <div class="f f--full"><label for="f-body" class="sr">本文（HTML）</label><textarea id="f-body" spellcheck="false"></textarea></div>
+          <div class="ad-preview"><p class="mini-title">プレビュー</p><div class="prose" id="preview"></div></div>
+        </div>
+      </fieldset>
+
+      <div class="ad-danger" id="danger" hidden>
+        <button class="btn btn--ghost btn--danger" type="button" id="btn-delete">この記事を削除</button>
+        <span id="confirm-del" hidden>本当に削除しますか？ <button class="btn btn--danger" type="button" id="btn-delete-yes">削除する</button> <button class="linkish" type="button" id="btn-delete-no">やめる</button></span>
+      </div>
+    </form>
+  </main>
+</div>
+
+<dialog class="modal" id="settings" aria-labelledby="settings-title">
+  <form class="modal__in ad-settings" method="dialog" id="settings-form">
+    <div class="modal__hd"><h2 id="settings-title" class="ad-h">GitHubの接続設定</h2></div>
+    <p class="ad-note">記事はGitHubのリポジトリに保存され、保存から数分でサイトに反映されます。設定はこのブラウザにだけ保存されます。</p>
+    <div class="f"><label for="s-repo">リポジトリ（所有者/名前）</label><input id="s-repo" placeholder="naniuru/website" required></div>
+    <div class="f"><label for="s-branch">ブランチ</label><input id="s-branch" placeholder="main"></div>
+    <div class="f"><label for="s-dir">記事フォルダ</label><input id="s-dir" placeholder="naniuru-media/content"></div>
+    <div class="f"><label for="s-token">アクセストークン</label><input id="s-token" type="password" autocomplete="off" placeholder="github_pat_..."><small>Fine-grained token（対象リポジトリのみ、Contents: Read and write）を使ってください。</small></div>
+    <div class="ad-settings__act"><button class="btn btn--ghost" value="cancel" formnovalidate>閉じる</button><button class="btn btn--cta" value="save" id="s-save">保存して接続</button></div>
+  </form>
+</dialog>
+
+<script src="frontmatter.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
