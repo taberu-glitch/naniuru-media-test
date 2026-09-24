@@ -224,7 +224,6 @@ function crumbsLd(list) {
 }
 
 // ---------- layout ----------
-const FONTS = 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@600;700&display=swap';
 let ASSET_V = '';
 
 function kobutsuLine() {
@@ -257,10 +256,8 @@ ${p.noindex ? '<meta name="robots" content="noindex">\n' : ''}${canonical && !p.
 <meta property="og:type" content="${p.ogType || 'website'}">
 <meta property="og:title" content="${esc(p.ogTitle || title)}">
 <meta property="og:description" content="${esc(p.description || site.description)}">
-${canonical ? `<meta property="og:url" content="${esc(canonical)}">\n` : ''}${og ? `<meta property="og:image" content="${esc(og)}">\n<meta name="twitter:card" content="summary_large_image">\n` : ''}<meta name="theme-color" content="#1F4E4A">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="${FONTS}">
+${canonical ? `<meta property="og:url" content="${esc(canonical)}">\n` : ''}${og ? `<meta property="og:image" content="${esc(og)}">\n<meta name="twitter:card" content="summary_large_image">\n` : ''}<meta name="theme-color" content="#076BED">
+<link rel="preload" href="${L(BASE + 'assets/fonts/OverusedGrotesk-VF.woff2')}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${L(BASE + 'assets/media.css')}${v}">
 ${site.siteUrl ? `<link rel="alternate" type="application/rss+xml" title="${esc(site.name)}" href="${esc(abs(BASE + 'feed.xml'))}">\n` : ''}${ld}
 </head>
@@ -584,13 +581,13 @@ function coverSvg(a) {
 <rect width="1200" height="675" fill="${bg}"/>
 <g fill="none" stroke="${ink}" stroke-opacity=".14" stroke-width="2">${rings}</g>
 <rect x="36" y="36" width="1128" height="603" fill="none" stroke="${ink}" stroke-opacity=".35" stroke-width="2"/>
-<text x="72" y="96" fill="${ink}" font-family="'IBM Plex Mono',Menlo,Consolas,monospace" font-size="26" letter-spacing="6" font-weight="600">NANIURU MEDIA</text>
-<text x="72" y="600" fill="${ink}" fill-opacity=".85" font-family="'IBM Plex Mono',Menlo,Consolas,monospace" font-size="24" letter-spacing="4">${e(c.en.toUpperCase())}</text>
+<text x="72" y="96" fill="${ink}" font-family="'Overused Grotesk Variable','Helvetica Neue',Arial,sans-serif" font-size="26" letter-spacing="6" font-weight="600">NANIURU MEDIA</text>
+<text x="72" y="600" fill="${ink}" fill-opacity=".85" font-family="'Overused Grotesk Variable','Helvetica Neue',Arial,sans-serif" font-size="24" letter-spacing="4">${e(c.en.toUpperCase())}</text>
 <g transform="translate(560 350)">
 <ellipse rx="380" ry="170" fill="${bg}" stroke="${ink}" stroke-width="7"/>
 <ellipse rx="356" ry="146" fill="none" stroke="${ink}" stroke-width="2.5"/>
-<text y="${Math.round(fs1 * 0.35)}" text-anchor="middle" fill="${ink}" font-family="'IBM Plex Mono',Menlo,Consolas,monospace" font-weight="600" font-size="${fs1}" letter-spacing="2">${e(label)}</text>
-<text y="-92" text-anchor="middle" fill="${ink}" fill-opacity=".8" font-family="'Noto Sans JP','Hiragino Sans',sans-serif" font-size="26" letter-spacing="8">${e(sub)}</text>
+<text y="${Math.round(fs1 * 0.35)}" text-anchor="middle" fill="${ink}" font-family="'Overused Grotesk Variable','Helvetica Neue',Arial,sans-serif" font-weight="600" font-size="${fs1}" letter-spacing="2">${e(label)}</text>
+<text y="-92" text-anchor="middle" fill="${ink}" fill-opacity=".8" font-family="'Yu Gothic','Hiragino Sans',sans-serif" font-size="26" letter-spacing="8">${e(sub)}</text>
 </g>
 </svg>`;
 }

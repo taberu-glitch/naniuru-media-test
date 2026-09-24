@@ -11,34 +11,63 @@
   "defaultAuthor": "ナニウル編集部",
   "ogImage": "",
   "perPage": 12,
-
-  "mainSite": { "label": "ナニウル公式サイト", "url": "/" },
+  "mainSite": {
+    "label": "ナニウル公式サイト",
+    "url": "/"
+  },
   "cta": {
     "heading": "品物の価値を、まず知る。",
     "text": "刻印・型番と写真を送るだけで、おおよその査定額をお伝えします。手数料の金額もあわせてご案内します。",
-    "primary": { "label": "LINEで査定を依頼する", "url": "/kaitori/" },
+    "primary": {
+      "label": "LINEで査定を依頼する",
+      "url": "/kaitori/"
+    },
     "secondary": [
-      { "label": "宅配買取について", "url": "/media/guide/takuhai-flow/" },
-      { "label": "店頭買取・来店予約", "url": "" }
+      {
+        "label": "宅配買取について",
+        "url": "/media/guide/takuhai-flow/"
+      },
+      {
+        "label": "店頭買取・来店予約",
+        "url": ""
+      }
     ]
   },
-
   "kobutsu": {
     "commission": "",
     "number": "",
     "holder": ""
   },
-
   "footerLinks": [
-    { "label": "ナニウルメディアについて", "url": "/media/about/" },
-    { "label": "記事一覧", "url": "/media/articles/" },
-    { "label": "連載", "url": "/media/series/" },
-    { "label": "ナニウル公式サイト", "url": "/" },
-    { "label": "運営会社", "url": "" },
-    { "label": "プライバシーポリシー", "url": "" },
-    { "label": "お問い合わせ", "url": "" }
+    {
+      "label": "ナニウルメディアについて",
+      "url": "/media/about/"
+    },
+    {
+      "label": "記事一覧",
+      "url": "/media/articles/"
+    },
+    {
+      "label": "連載",
+      "url": "/media/series/"
+    },
+    {
+      "label": "ナニウル公式サイト",
+      "url": "/"
+    },
+    {
+      "label": "運営会社",
+      "url": ""
+    },
+    {
+      "label": "プライバシーポリシー",
+      "url": ""
+    },
+    {
+      "label": "お問い合わせ",
+      "url": ""
+    }
   ],
-
   "categories": [
     {
       "slug": "souba",
@@ -47,8 +76,8 @@
       "en": "Market",
       "lead": "品物の値段が決まる仕組みを「知る」。",
       "description": "金・プラチナの相場の読み方、純度や型番で価格が変わる理由など、査定額の根拠になる知識を解説します。",
-      "color": "#6E5520",
-      "ink": "#F3E3B5"
+      "color": "#076BED",
+      "ink": "#FFFFFF"
     },
     {
       "slug": "guide",
@@ -57,8 +86,8 @@
       "en": "How to Sell",
       "lead": "損をしない売り方を「学ぶ」。",
       "description": "買取店の選び方、店頭・宅配・出張の手順、本人確認の方法など、売る前に確かめておきたい手続きをまとめます。",
-      "color": "#1F4E4A",
-      "ink": "#D8EBE6"
+      "color": "#0033CC",
+      "ink": "#FFFFFF"
     },
     {
       "slug": "items",
@@ -67,8 +96,8 @@
       "en": "By Item",
       "lead": "手元の品物について「調べる」。",
       "description": "ブランドバッグ、腕時計、ジュエリー、カメラ、骨董品など、品目ごとの査定ポイントと、売る前の準備を紹介します。",
-      "color": "#2E3A4C",
-      "ink": "#DCE3EE"
+      "color": "#0072BC",
+      "ink": "#FFFFFF"
     },
     {
       "slug": "seiri",
@@ -77,25 +106,67 @@
       "en": "Decluttering",
       "lead": "遺品整理・生前整理を「進める」。",
       "description": "売れるものの見分け方、家族で片付けを進める順番、専門業者への頼み方など、整理と売却をつなぐ情報をお届けします。",
-      "color": "#5B3B45",
-      "ink": "#F0DDE2"
+      "color": "#000000",
+      "ink": "#66FFCC"
     }
   ],
-
   "items": [
-    { "slug": "bag", "name": "ブランドバッグ", "mark": "BAG" },
-    { "slug": "watch", "name": "腕時計", "mark": "WATCH" },
-    { "slug": "kikinzoku", "name": "貴金属・金・プラチナ", "mark": "Au·Pt" },
-    { "slug": "jewelry", "name": "ジュエリー", "mark": "JEWEL" },
-    { "slug": "apparel", "name": "ブランド衣類", "mark": "WEAR" },
-    { "slug": "camera", "name": "カメラ", "mark": "CAMERA" },
-    { "slug": "instrument", "name": "楽器", "mark": "MUSIC" },
-    { "slug": "antique", "name": "骨董品", "mark": "ANTIQUE" },
-    { "slug": "stamp-coin", "name": "切手・古銭", "mark": "COIN" },
-    { "slug": "kaden", "name": "家電", "mark": "ELEC" },
-    { "slug": "other", "name": "その他", "mark": "OTHER" }
+    {
+      "slug": "bag",
+      "name": "ブランドバッグ",
+      "mark": "BAG"
+    },
+    {
+      "slug": "watch",
+      "name": "腕時計",
+      "mark": "WATCH"
+    },
+    {
+      "slug": "kikinzoku",
+      "name": "貴金属・金・プラチナ",
+      "mark": "Au·Pt"
+    },
+    {
+      "slug": "jewelry",
+      "name": "ジュエリー",
+      "mark": "JEWEL"
+    },
+    {
+      "slug": "apparel",
+      "name": "ブランド衣類",
+      "mark": "WEAR"
+    },
+    {
+      "slug": "camera",
+      "name": "カメラ",
+      "mark": "CAMERA"
+    },
+    {
+      "slug": "instrument",
+      "name": "楽器",
+      "mark": "MUSIC"
+    },
+    {
+      "slug": "antique",
+      "name": "骨董品",
+      "mark": "ANTIQUE"
+    },
+    {
+      "slug": "stamp-coin",
+      "name": "切手・古銭",
+      "mark": "COIN"
+    },
+    {
+      "slug": "kaden",
+      "name": "家電",
+      "mark": "ELEC"
+    },
+    {
+      "slug": "other",
+      "name": "その他",
+      "mark": "OTHER"
+    }
   ],
-
   "series": [
     {
       "slug": "hajimete",
@@ -110,23 +181,57 @@
       "pickup": true
     }
   ],
-
   "tags": [
-    { "slug": "kin", "name": "金" },
-    { "slug": "souba", "name": "相場" },
-    { "slug": "hallmark", "name": "純度・刻印" },
-    { "slug": "tesuryo", "name": "手数料" },
-    { "slug": "honnin-kakunin", "name": "本人確認" },
-    { "slug": "takuhai", "name": "宅配買取" },
-    { "slug": "shutcho", "name": "出張買取" },
-    { "slug": "tentou", "name": "店頭買取" },
-    { "slug": "mise-erabi", "name": "店の選び方" },
-    { "slug": "trouble", "name": "トラブル対策" },
-    { "slug": "kobutsu-ho", "name": "古物営業法" }
+    {
+      "slug": "kin",
+      "name": "金"
+    },
+    {
+      "slug": "souba",
+      "name": "相場"
+    },
+    {
+      "slug": "hallmark",
+      "name": "純度・刻印"
+    },
+    {
+      "slug": "tesuryo",
+      "name": "手数料"
+    },
+    {
+      "slug": "honnin-kakunin",
+      "name": "本人確認"
+    },
+    {
+      "slug": "takuhai",
+      "name": "宅配買取"
+    },
+    {
+      "slug": "shutcho",
+      "name": "出張買取"
+    },
+    {
+      "slug": "tentou",
+      "name": "店頭買取"
+    },
+    {
+      "slug": "mise-erabi",
+      "name": "店の選び方"
+    },
+    {
+      "slug": "trouble",
+      "name": "トラブル対策"
+    },
+    {
+      "slug": "kobutsu-ho",
+      "name": "古物営業法"
+    }
   ],
-
-  "admin": { "repo": "", "branch": "main", "dir": "naniuru-media/content" },
-
+  "admin": {
+    "repo": "",
+    "branch": "main",
+    "dir": "naniuru-media/content"
+  },
   "ranking": [],
   "editorPicks": []
 }

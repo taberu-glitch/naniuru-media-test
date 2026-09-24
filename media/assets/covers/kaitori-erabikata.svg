@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="失敗しない買取店の選び方">
-<rect width="1200" height="675" fill="#1F4E4A"/>
-<g fill="none" stroke="#D8EBE6" stroke-opacity=".14" stroke-width="2"><ellipse cx="930" cy="338" rx="70" ry="42"/><ellipse cx="930" cy="338" rx="100" ry="60"/><ellipse cx="930" cy="338" rx="130" ry="78"/><ellipse cx="930" cy="338" rx="160" ry="96"/><ellipse cx="930" cy="338" rx="190" ry="114"/><ellipse cx="930" cy="338" rx="220" ry="132"/><ellipse cx="930" cy="338" rx="250" ry="150"/><ellipse cx="930" cy="338" rx="280" ry="168"/><ellipse cx="930" cy="338" rx="310" ry="186"/><ellipse cx="930" cy="338" rx="340" ry="204"/><ellipse cx="930" cy="338" rx="370" ry="222"/><ellipse cx="930" cy="338" rx="400" ry="240"/><ellipse cx="930" cy="338" rx="430" ry="258"/><ellipse cx="930" cy="338" rx="460" ry="276"/><ellipse cx="930" cy="338" rx="490" ry="294"/><ellipse cx="930" cy="338" rx="520" ry="312"/></g>
-<rect x="36" y="36" width="1128" height="603" fill="none" stroke="#D8EBE6" stroke-opacity=".35" stroke-width="2"/>
-<text x="72" y="96" fill="#D8EBE6" font-family="'IBM Plex Mono',Menlo,Consolas,monospace" font-size="26" letter-spacing="6" font-weight="600">NANIURU MEDIA</text>
-<text x="72" y="600" fill="#D8EBE6" fill-opacity=".85" font-family="'IBM Plex Mono',Menlo,Consolas,monospace" font-size="24" letter-spacing="4">HOW TO SELL</text>
+<rect width="1200" height="675" fill="#0033CC"/>
+<g fill="none" stroke="#FFFFFF" stroke-opacity=".14" stroke-width="2"><ellipse cx="930" cy="338" rx="70" ry="42"/><ellipse cx="930" cy="338" rx="100" ry="60"/><ellipse cx="930" cy="338" rx="130" ry="78"/><ellipse cx="930" cy="338" rx="160" ry="96"/><ellipse cx="930" cy="338" rx="190" ry="114"/><ellipse cx="930" cy="338" rx="220" ry="132"/><ellipse cx="930" cy="338" rx="250" ry="150"/><ellipse cx="930" cy="338" rx="280" ry="168"/><ellipse cx="930" cy="338" rx="310" ry="186"/><ellipse cx="930" cy="338" rx="340" ry="204"/><ellipse cx="930" cy="338" rx="370" ry="222"/><ellipse cx="930" cy="338" rx="400" ry="240"/><ellipse cx="930" cy="338" rx="430" ry="258"/><ellipse cx="930" cy="338" rx="460" ry="276"/><ellipse cx="930" cy="338" rx="490" ry="294"/><ellipse cx="930" cy="338" rx="520" ry="312"/></g>
+<rect x="36" y="36" width="1128" height="603" fill="none" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="2"/>
+<text x="72" y="96" fill="#FFFFFF" font-family="'Overused Grotesk Variable','Helvetica Neue',Arial,sans-serif" font-size="26" letter-spacing="6" font-weight="600">NANIURU MEDIA</text>
+<text x="72" y="600" fill="#FFFFFF" fill-opacity=".85" font-family="'Overused Grotesk Variable','Helvetica Neue',Arial,sans-serif" font-size="24" letter-spacing="4">HOW TO SELL</text>
 <g transform="translate(560 350)">
-<ellipse rx="380" ry="170" fill="#1F4E4A" stroke="#D8EBE6" stroke-width="7"/>
-<ellipse rx="356" ry="146" fill="none" stroke="#D8EBE6" stroke-width="2.5"/>
-<text y="41" text-anchor="middle" fill="#D8EBE6" font-family="'IBM Plex Mono',Menlo,Consolas,monospace" font-weight="600" font-size="118" letter-spacing="2">CHECK 6</text>
-<text y="-92" text-anchor="middle" fill="#D8EBE6" fill-opacity=".8" font-family="'Noto Sans JP','Hiragino Sans',sans-serif" font-size="26" letter-spacing="8">売り方を学ぶ</text>
+<ellipse rx="380" ry="170" fill="#0033CC" stroke="#FFFFFF" stroke-width="7"/>
+<ellipse rx="356" ry="146" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+<text y="41" text-anchor="middle" fill="#FFFFFF" font-family="'Overused Grotesk Variable','Helvetica Neue',Arial,sans-serif" font-weight="600" font-size="118" letter-spacing="2">CHECK 6</text>
+<text y="-92" text-anchor="middle" fill="#FFFFFF" fill-opacity=".8" font-family="'Yu Gothic','Hiragino Sans',sans-serif" font-size="26" letter-spacing="8">売り方を学ぶ</text>
 </g>
 </svg>
