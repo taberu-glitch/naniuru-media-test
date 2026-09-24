@@ -238,7 +238,7 @@ function layout(p) {
   const canonical = abs(p.url);
   const title = p.fullTitle || (p.title ? `${p.title}｜${site.name}` : `${site.name}｜${site.tagline}`);
   const ld = (p.ld || []).filter(Boolean).map((o) => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, '\\u003c')}</script>`).join('\n');
-  const v = OPT.relative ? '' : `?v=${ASSET_V}`;
+  const v = `?v=${ASSET_V}`;
   const og = p.ogImage ? (p.ogImage.startsWith('http') ? p.ogImage : abs(p.ogImage)) : '';
   const nav = liveCats.map((c) => `<a href="${L(catUrl(c))}"${p.active === c.slug ? ' aria-current="page"' : ''}>${esc(c.name)}</a>`).join('')
     + (liveSeries.length ? `<a href="${L(BASE + 'series/')}"${p.active === 'series' ? ' aria-current="page"' : ''}>連載</a>` : '')
